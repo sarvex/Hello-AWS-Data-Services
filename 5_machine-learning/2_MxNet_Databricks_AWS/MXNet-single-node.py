@@ -43,9 +43,11 @@ def read_data(label_url, image_url):
 
 path='http://yann.lecun.com/exdb/mnist/'
 (train_lbl, train_img) = read_data(
-    path+'train-labels-idx1-ubyte.gz', path+'train-images-idx3-ubyte.gz')
+    f'{path}train-labels-idx1-ubyte.gz', f'{path}train-images-idx3-ubyte.gz'
+)
 (val_lbl, val_img) = read_data(
-    path+'t10k-labels-idx1-ubyte.gz', path+'t10k-images-idx3-ubyte.gz')
+    f'{path}t10k-labels-idx1-ubyte.gz', f'{path}t10k-images-idx3-ubyte.gz'
+)
 
 # COMMAND ----------
 
@@ -63,7 +65,7 @@ display()
 
 # COMMAND ----------
 
-print('label: %s' % (train_lbl[0:10],))
+print(f'label: {train_lbl[:10]}')
 
 # COMMAND ----------
 
